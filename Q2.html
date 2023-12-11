@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>第二題</title>
+	<meta charset = "utf-8"/>
+	<style>
+        @font-face {
+            font-family: title;
+            src: url("SoukouMincho.ttf");
+        }
+        @font-face {
+            font-family: txt;
+            src: url("GenRyuMin.ttc");
+        }
+		.btn,
+        .btn:focus {
+            position: relative;
+            width: 15vw;
+            border: none;
+            border-radius: 2px;
+            background-position: center;
+            background-color: #2195f37b;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background 0.8s;
+            padding: 10px 20px;
+            box-shadow: 0 0 4px #999;
+            margin-bottom: 3vh;
+
+        }
+        .btn:hover {
+            color: #FFFFFF;
+            background: #47a7f500 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+        }
+        .btn:active {
+            background-color: #6eb9f7;
+            background-size: 100%;
+            transition: background 0s;
+        }
+        body {
+            background-image: url('bg1.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            color: #FFFFFF;
+        }
+        .tit {
+            font-family: title;
+            font-size: 5vw;
+            margin-bottom: 2vh;
+        }
+        .liltit {
+            font-family: title;
+            font-size: 3vw;
+            margin-bottom: 5vh;
+        }
+        .txt {
+            font-family: txt;
+            font-size: 1.8vw;
+            margin-top: 0;
+            margin-bottom: 4vh;
+            font-weight:bold;
+            text-align: center;
+        }
+    </style>
+    <script>
+        
+
+    </script>
+</head>
+
+<body>
+    <header> <p class="tit">守護神測試</p></header>
+    <p class="liltit">第二題</p>
+    <p class="txt">看完窗外的景色後，<br>你決定待在屋內就好，<br>你會想做甚麼事情？</p>
+    <a href="Q3.html" class="btn" id="btn_1">
+        從老舊的櫥櫃裡拿出祖傳的食譜進行研究
+    </a>
+    <a href="Q3.html" class="btn" id="btn_2">
+        整理收藏已久的郵票合集
+    </a>
+    <a href="Q3.html" class="btn" id="btn_3">
+        找出很久以前撿的木頭進行雕刻
+    </a>
+    <a href="Q3.html" class="btn" id="btn_4">
+        替自己泡一杯溫熱的焙茶
+    </a>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var linkBtns = document.querySelectorAll(".btn");
+    
+            linkBtns.forEach(function(linkBtn) {
+                linkBtn.addEventListener("click", function(event) {
+                    // 暫停網頁移動
+                    event.preventDefault();
+    
+                    var linkId = linkBtn.id;
+    
+                    // 使用 sessionStorage 記錄選擇的 id 值
+                    sessionStorage.setItem("Q2", linkId);
+    
+                    // 移動網頁
+                    window.location.href = linkBtn.getAttribute("href");
+                });
+            });
+        });
+    </script>
+    
+</body>
+
+</html>

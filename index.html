@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首頁</title>
+	<meta charset = "utf-8"/>
+	<style>
+        @font-face {
+            font-family: title;
+            src: url("SoukouMincho.ttf");
+        }
+        @font-face {
+            font-family: txt;
+            src: url("GenRyuMin.ttc");
+        }
+		.btn,
+        .btn:focus {
+            position: relative;
+            min-width: 200px;
+            border: none;
+            border-radius: 2px;
+            background-position: center;
+            background-color: #2196f3;
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background 0.8s;
+            padding: 10px 20px;
+            box-shadow: 0 0 4px #999;
+            margin-top: 4vh;
+        }
+        .btn:hover {
+            color: #FFFFFF;
+            background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+        }
+        .btn:active {
+            background-color: #6eb9f7;
+            background-size: 100%;
+            transition: background 0s;
+        }
+        body {
+            background-image: url('bg1.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            color: #FFFFFF;
+        }
+       .tit {
+            font-family: title;
+            font-size: 11vw;
+            margin-bottom: 3vh;
+       }
+       .txt {
+            font-family: txt;
+            font-size: 2vw;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight:bold;
+       }
+    </style>
+    <script>
+        
+
+    </script>
+</head>
+
+<body>
+    <p class="tit">守護神測試</p>
+    <p class="txt">若每個人的精神海裡都住著一名守護神，</p><p class="txt">你的那位守護神將會是以什麼樣貌呈現的呢？</p>
+    <a href="Q1.html" class="btn">
+        開始測驗
+    </a>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>答案</title>
+	<meta charset = "utf-8"/>
+	<style>
+        @font-face {
+            font-family: title;
+            src: url("SoukouMincho.ttf");
+        }
+        @font-face {
+            font-family: txt;
+            src: url("GenRyuMin.ttc");
+        }
+		.btn,
+        .btn:focus {
+            position: relative;
+            width: 15vw;
+            border: none;
+            border-radius: 2px;
+            background-position: center;
+            background-color: #2195f3;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background 0.8s;
+            padding: 10px 20px;
+            box-shadow: 0 0 4px #999;
+            margin-bottom: 3vh;
+
+        }
+        .btn:hover {
+            color: #FFFFFF;
+            background: #47a7f500 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+        }
+        .btn:active {
+            background-color: #6eb9f7;
+            background-size: 100%;
+            transition: background 0s;
+        }
+        body {
+            background-image: url('bg1.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            color: #FFFFFF;
+        }
+        .tit {
+            font-family: title;
+            font-size: 5vw;
+            margin-bottom: 2vh;
+        }
+        .liltit {
+            font-family: title;
+            font-size: 3vw;
+            margin-bottom: 5vh;
+        }
+        .txt {
+            font-family: txt;
+            font-size: 1.8vw;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight:bold;
+            text-align: center;
+        }
+        #filenameDisplay {
+            margin-bottom: 3vh;
+        }
+    </style>
+    <script>
+        
+
+    </script>
+</head>
+
+<body>
+    <header> <p class="tit">守護神測試</p></header>
+    <p class="txt" >您的守護神是：</p>
+    <img src="" alt="Image" id="imageDisplay" class="image" width="30%">
+    <div class="txt" id="filenameDisplay"></div>
+    <a href="index.html" class="btn">
+        再測一次
+    </a>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var q1 = sessionStorage.getItem("Q1");
+            var q4 = sessionStorage.getItem("Q4");
+
+            var filenameDisplay = document.getElementById("filenameDisplay");
+            var filename;
+            var imageDisplay = document.getElementById("imageDisplay");
+
+            if (q1 === "btn_1" && q4 === "btn_1") {
+                imageDisplay.src = "image1.png";
+                filename = "仙鹿"; 
+            } else if (q1 === "btn_1" && q4 === "btn_2") {
+                imageDisplay.src = "image2.png";
+                filename = "靈貓"; 
+            } else if (q1 === "btn_1" && q4 === "btn_3") {
+                imageDisplay.src = "image3.png";
+                filename = "玉兔"; 
+            } else if (q1 === "btn_1" && q4 === "btn_4") {
+                imageDisplay.src = "image4.png";
+                filename = "狂牛"; 
+            } else if (q1 === "btn_2" && q4 === "btn_1") {
+                imageDisplay.src = "image5.png";
+                filename = "巨熊"; 
+            } else if (q1 === "btn_2" && q4 === "btn_2") {
+                imageDisplay.src = "image6.png";
+                filename = "樹蛙"; 
+            } else if (q1 === "btn_2" && q4 === "btn_3") {
+                imageDisplay.src = "image7.png";
+                filename = "飛鼠"; 
+            } else if (q1 === "btn_2" && q4 === "btn_4") {
+                imageDisplay.src = "image8.png";
+                filename = "貓頭鷹"; 
+            } else if (q1 === "btn_3" && q4 === "btn_1") {
+                imageDisplay.src = "image9.png";
+                filename = "飛龍"; 
+            } else if (q1 === "btn_3" && q4 === "btn_2") {
+                imageDisplay.src = "image10.png";
+                filename = "變色龍"; 
+            } else if (q1 === "btn_3" && q4 === "btn_3") {
+                imageDisplay.src = "image11.png";
+                filename = "玄龜"; 
+            } else if (q1 === "btn_3" && q4 === "btn_4") {
+                imageDisplay.src = "image12.png";
+                filename = "蝸牛"; 
+            } else if (q1 === "btn_4" && q4 === "btn_1") {
+                imageDisplay.src = "image13.png";
+                filename = "水母"; 
+             }else if (q1 === "btn_4" && q4 === "btn_2") {
+                imageDisplay.src = "image14.png";
+                filename = "金魚"; 
+            } else if (q1 === "btn_4" && q4 === "btn_3") {
+                imageDisplay.src = "image15.png";
+                filename = "大象"; 
+            } else if (q1 === "btn_4" && q4 === "btn_4") {
+                imageDisplay.src = "image16.png";
+                filename = "閃蝶"; 
+            } else {
+                imageDisplay.src = "image17.png";
+                filename = "這裡什麼都沒有QQ"; 
+            }
+            filenameDisplay.textContent = filename;
+
+        });
+    </script>
+    
+</body>
+
+</html>
